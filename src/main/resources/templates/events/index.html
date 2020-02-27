@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Coding Events</title>
-</head>
 
-<body>
+<head th:replace="fragments :: head"></head>
+
+
+<body clas="container">
 
 <h1>Coding Events</h1>
 
+<header th:replace="fragments :: header"></header>
+
+
 <p th:unless="${events} and ${events.size()}">No events!</p>
 
-<nav>
-    <th:block th:each ="event : ${events}">
-        <li th:text="${event}"></li>
-    </th:block>
-</nav>
+
 
 </body>
 </html>
